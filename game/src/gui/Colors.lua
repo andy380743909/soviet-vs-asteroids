@@ -24,5 +24,5 @@ function colors.green()
 end
 
 function colors.mode(mode)
-    love.graphics.setColorMode(mode)
+    love.graphics.setBlendMode(mode)
 end

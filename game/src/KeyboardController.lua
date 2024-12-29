@@ -116,7 +116,7 @@ function Class:update(dt)
         self.station:fireLaser()
 
         -- SHOOP DA WHOOP!!!!
-        if love.keyboard.isDown(" ") then
+        if love.keyboard.isDown("space") then
             self.station:launchMissile()
         end
     elseif self.mode == "upgrade" then

@@ -102,7 +102,7 @@ function Class.create(options)
     if (
         gameConfig.controls.default == "joystick" and
         (
-            love.joystick.isOpen(1) or
+            --love.joystick.isOpen(1) or
             gameConfig.controls.force == "joystick"
         )
     ) then

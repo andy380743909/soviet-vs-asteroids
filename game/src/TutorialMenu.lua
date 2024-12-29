@@ -120,7 +120,7 @@ function Class:draw()
         textY = gameConfig.screen.real.height / 2 + 50 * self.scale
         textW = 609 * self.scale - 100 * self.scale
 
-        colors.mode("modulate")
+        colors.mode("alpha")
 
         colors.white()
         love.graphics.printf(

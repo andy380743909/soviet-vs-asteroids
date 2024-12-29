@@ -52,7 +52,7 @@ function Class.create(options)
 
     self.spriteBatch = love.graphics.newSpriteBatch(options.spriteSheet, self.frameCount)
     self.spriteBatch:clear()
-    self.spriteBatch:addq(self.frames[self.currentFrame], 0, 0)
+    self.spriteBatch:add(self.frames[self.currentFrame], 0, 0)
 
     return self
 end
@@ -77,7 +77,7 @@ function Class:update(dt)
         end
 
         self.spriteBatch:clear()
-        self.spriteBatch:addq(self.frames[self.currentFrame], 0, 0)
+        self.spriteBatch:add(self.frames[self.currentFrame], 0, 0)
     end
 end
 

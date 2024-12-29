@@ -270,15 +270,17 @@ function Class:draw()
     end
 
     love.graphics.setColor(0, 127, 255, 32)
-    love.graphics.setLine(3, "smooth")
+    love.graphics.setLineWidth(3)
+    love.graphics.setLineStyle("smooth")
     --love.graphics.line((50 + 20)*math.cos(-self.laserAngle), (50 + 20)*math.sin(-self.laserAngle), 430*math.cos(-self.laserAngle), 430*math.sin(-self.laserAngle))
     love.graphics.setColor(0, 127, 255, 24)
-    love.graphics.setLine(3 + gameConfig.laser.laserWidth, "smooth")
+    love.graphics.setLineWidth(3 + gameConfig.laser.laserWidth)
+    love.graphics.setLineStyle("smooth")
     love.graphics.line((50 + 100) *math.cos(-self.laserAngle) , (50 + 100) *math.sin(-self.laserAngle), 430*math.cos(-self.laserAngle), 430*math.sin(-self.laserAngle))
     love.graphics.arc( "fill",  430.5*math.cos(-self.laserAngle), 430.5*math.sin(-self.laserAngle), gameConfig.laser.laserWidth/2+2, -self.laserAngle - math.pi/2, -self.laserAngle + math.pi/2,  32 )
     pos1 = vec2(150, gameConfig.laser.laserWidth / 2 ):rotateRad(-self.laserAngle)
     pos2 = vec2(150, -gameConfig.laser.laserWidth / 2 ):rotateRad(-self.laserAngle)
-    love.graphics.triangle( "fill", (50 + 20)*math.cos(-self.laserAngle), (50 + 20)*math.sin(-self.laserAngle),
+    love.graphics.polygon( "fill", (50 + 20)*math.cos(-self.laserAngle), (50 + 20)*math.sin(-self.laserAngle),
                                     pos1.x, pos1.y,
                                     pos2.x, pos2.y)
 

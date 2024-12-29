@@ -83,15 +83,15 @@ end
 function SoundManager.startShopMusic()
 	if not self.noMusic then
 		self.musicAmbiance:pause()
-		self.musicPause:resume()
+		self.musicPause:play()
 	end
 end
 
 function SoundManager.stopShopMusic()
 	if not self.noMusic then
 		self.musicPause:pause()
-		self.musicPause:rewind()
-		self.musicAmbiance:resume()
+		self.musicPause:seek(0)
+		self.musicAmbiance:play()
 	end
 end
 
@@ -126,21 +126,21 @@ end
 
 function SoundManager.upgrade()
 	if not self.noSound then
-		self.soundUpgrade:rewind()
+		self.soundUpgrade:seek(0)
 		self.soundUpgrade:play()
 	end
 end
 
 function SoundManager.laserPlace()
 	if not self.noSound then
-		self.soundUpgrade:rewind()
+		self.soundUpgrade:seek(0)
 		self.soundLaserPlace:play()
 	end
 end
 
 function SoundManager.dronePlace()
 	if not self.noSound then
-		self.soundUpgrade:rewind()
+		self.soundUpgrade:seek(0)
 		self.soundDronePlace:play()
 	end
 end

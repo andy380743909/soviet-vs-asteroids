@@ -75,7 +75,7 @@ function Class:draw()
         love.graphics.draw(self.border, self.x, self.y, 0, self.scale)
     end
 
-    colors.mode("modulate")
+    colors.mode("alpha")
 
     -- display button text
     if self.valign == "middle" then

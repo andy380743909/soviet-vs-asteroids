@@ -70,7 +70,7 @@ function Class:update(dt)
             self.station:setLaserSatAngle(deltaRad)
 
             if self.mode == "game" then
-                if love.mouse.isDown("l", "r") then
+                if love.mouse.isDown(1, 2) then
                     self.station:fireLaser()
                 end
             end
@@ -78,7 +78,7 @@ function Class:update(dt)
             self.station:setMissileLauncherAngle(deltaRad)
 
             if self.mode == "game" then
-                if love.mouse.isDown("l", "r") then
+                if love.mouse.isDown(1, 2) then
                     self.station:launchMissile()
                 end
             end

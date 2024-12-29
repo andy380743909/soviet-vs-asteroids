@@ -86,11 +86,11 @@ function Class:explode(asteroid)
     self.exploded = true
 
     self.xplosion = love.graphics.newParticleSystem( fire, 20 )
-    self.xplosion:setLifetime(0.15)
+    self.xplosion:setEmitterLifetime(0.15)
     self.xplosion:setEmissionRate(200)
     self.xplosion:setSpread( 2 * math.pi )
     self.xplosion:setDirection( 0, math.pi )
-    self.xplosion:setParticleLife(0.15,0.25)
+    self.xplosion:setParticleLifetime(0.15,0.25)
     self.xplosion:setSizes(.3,1)
     self.xplosion:setRotation(0, 2 * math.pi)
     self.xplosion:setColors(
